@@ -1,4 +1,5 @@
 package shape;
+import java.util.Scanner;
 class Shape{
     public void area()
     {
@@ -34,12 +35,25 @@ class Circle extends Shape{
 public class Main
 {
     public static void main(String args[]){
-        Circle c =new Circle();
-        c.value1(5);
-        c.area();
-        Triangle t =new Triangle();
-        t.value(8,3);
-        t.area();
-    
+    	System.out.println("select shape for which area has to calculate 1.triangle 2.circle");
+    	Scanner ac=new Scanner(System.in);
+    	int a=ac.nextInt();
+    	if(a==2)
+    	{
+	        Circle c =new Circle();
+	        c.value1(5);
+	        c.area();
+    	}
+    	if(a==1)
+    	{
+	        Triangle t =new Triangle();
+	        t.value(8,3);
+	        t.area();
+    	}
+    	else
+    	{
+    		System.out.println("wrong number");
+    	}
+    	
     }
 }
